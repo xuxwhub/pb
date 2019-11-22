@@ -4,7 +4,7 @@ import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "t_user")
-public class User {
+public class User extends DynamicTableEntity {
     /**
      * 主键
      */

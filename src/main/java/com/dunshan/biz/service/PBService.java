@@ -22,7 +22,9 @@ public class PBService {
   }
 
   public User getById(String id) {
-    return mapper.selectByPrimaryKey(id);
+    User u = new User();
+    u.setId(id);
+    return mapper.selectOne(u);
   }
 
   public Boolean add(User user) {
@@ -30,7 +32,9 @@ public class PBService {
   }
 
   public Boolean deleteById(String id) {
-    return mapper.deleteByPrimaryKey(id) > 0;
+    User u = new User();
+    u.setId(id);
+    return mapper.delete(u) > 0;
   }
 
   public Boolean update(User user) {
