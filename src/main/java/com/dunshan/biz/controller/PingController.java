@@ -23,7 +23,7 @@ public class PingController {
   @ResponseBody
   public String ping() {
     logger.info("ping controller");
-    return new Date().toString();
+    return "pb: " + new Date().toString();
   }
 
 
